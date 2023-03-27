@@ -1,0 +1,73 @@
+.add-btn {
+  margin-left: 63rem;
+  margin-bottom: 6rem;
+  margin-top: 1rem;
+  border: 3px solid black;
+  border-radius: 5px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin-right: 30rem;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: start;
+}
+
+.form-group input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: start;
+}
+
+.button-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 3rem;
+}
+
+.back {
+  display: flex;
+  border: 2px solid black;
+  border-radius: 3px;
+  background-color: blue;
+  margin-top: 35px;
+  color: white;
+  font-size: 14px;
+}
+
+.submit-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 35px;
+  border: 2px solid black;
+  border-radius: 3px;
+  background-color: blue;
+  color: white;
+  font-size: 14px;
+}
+
+.button-links:hover {
+  cursor: pointer;
+}
+
+.h1 {
+  color: blue;
+  background-color: violet;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
