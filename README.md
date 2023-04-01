@@ -13,6 +13,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [🚀 Loom Video](#live-demo)
   - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
@@ -63,9 +64,13 @@
 
 <p align="right">([back to top](#readme-top))</p>
 
+## 🚀 Loom Video <a name="live-demo"></a>
+
+- [video](https://www.loom.com/share/fb1c886faf8f4b178339eb4502932875)
+
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [N/A](https://yourdeployedapplicationlink.com)
+- [Demo](https://propay.onrender.com/)
 
 <p align="right">([back to top](#readme-top))</p>
 
