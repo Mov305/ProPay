@@ -83,7 +83,9 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
-  database: Ror_production
-  username: Ror
-  password: <%= ENV["ROR_DATABASE_PASSWORD"] %>
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
