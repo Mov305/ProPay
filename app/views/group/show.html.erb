@@ -1,0 +1,54 @@
+<section class="bg-slate-200 min-h-screen">
+    <div class="flex flex-col">
+        <div class="flex relative">
+            <%= link_to  group_index_path do %>
+            <span class="absolute left-0 top-0 p-4 text-2xl text-gray-200/75 hover:text-gray-200" >
+                &#8592;
+            </span>
+            <% end %>
+            <div class="text-center flex-1 bg-[#3778c2] text-gray-200 py-8 text-xl border-t border-gray-300 uppercase">Payments</div>
+        </div>
+        <div class="text-center bg-[#3778c2] font-light text-gray-300/75 text-lg  border-gray-300">Most Recent</div>
+    <div class="flex flex-1 p-4">
+        <img src= <%= @group.icon %> alt= <%= @group.name %> class="h-24 w-24 rounded-lg" />
+
+        <div class="flex flex-col flex-1 justify-between p-2">
+            <div class="flex border-b border-slate-400/50 justify-between">
+                <span class="text-lg font-medium text-gray-900">
+                    <%= @group.name %>
+                </span>
+                <span>
+                    $ <%= @group.payments.sum(:amount) %>
+                </span>
+            </div>
+            <div class="flex justify-between">
+                <span class="text-sm text-gray-500">
+                    <%= @group.created_at.strftime("%B %d, %Y") %>
+                 </span>
+                <%= link_to "New Payment", new_group_payment_path(@group), class:"inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white" %>
+            </div>
+        </div>
+    </div>
+
+      <div class="text-center border-b text-gray-700/75 text-lg  border-gray-300">Payments</div>
+
+      <div class="flex flex-col gap-2 p-4 pt-10 items-center">
+          <% @group.payments.each_with_index do |payment, index| %>
+            <div class="flex justify-between w-full bg-white/75 shadow-md rounded-lg p-4">
+                <span class="text-lg font-medium text-gray-900">
+                    <%= index + 1 %>-
+                </span>
+                <span class="text-sm text-gray-500">
+                    <%= payment.created_at.strftime("%B %d, %Y") %>
+                </span>
+                <span class="text-sm text-gray-500">
+                <%= payment.name %>
+                </span>
+                <span class="text-sm text-gray-500">
+                    $ <%= payment.amount %>
+                </span>
+            </div>
+          <% end %>
+      </div>
+    </div>
+  </section>
