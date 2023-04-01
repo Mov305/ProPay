@@ -11,14 +11,16 @@ User.create(name: 'user1', email: 'user1@example.com', password: 'password1')
 User.create(name: 'user2', email: 'user2@example.com', password: 'password2')
 User.create(name: 'user3', email: 'user3@example.com', password: 'password3')
 
-# Create some example groups
-Group.create(name: 'Group A', icon: 'icon-a.png')
-Group.create(name: 'Group B', icon: 'icon-b.png')
-Group.create(name: 'Group C', icon: 'icon-c.png')
-
 # Create some example payments associated with users
 user1 = User.find_by(name: 'user1')
 user2 = User.find_by(name: 'user2')
+
+# Create some example groups
+Group.create(name: 'Group A', icon: 'icon-a.png', user: user1)
+Group.create(name: 'Group B', icon: 'icon-b.png', user: user1)
+Group.create(name: 'Group C', icon: 'icon-c.png', user: user2)
+
+
 
 # Create some example payments associated with groups
 group1 = Group.find_by(name: 'Group A')

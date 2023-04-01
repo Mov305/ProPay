@@ -1,0 +1,21 @@
+<section class="bg-slate-200 min-h-screen">
+  <div class="flex flex-col">
+    <div
+      class="text-center bg-[#3778c2] text-gray-200 py-8 text-xl border-t border-gray-300 uppercase"
+    >
+      Transactions' Groups
+    </div>
+    <div class="text-center bg-[#3778c2] font-light text-gray-300/75 text-lg border-gray-300">
+      Most Recent
+    </div>
+
+    <div class="flex flex-col gap-2 p-2 pt-10 items-center">
+      <% @groups.each do |group| %> <%= render partial: "shared/group_card", locals: { group: group
+      } %> <% end %>
+    </div>
+  </div>
+  <div class="fixed bottom-0 left-0 p-4 bg-[#5fb523] flex justify-center w-full">
+    <%= link_to "New Category", new_group_path, class:"inline-block px-5 py-3 border-4 border-white max-w-sm w-full text-center hover:bg-white hover:text-[#5fb523] transition
+    text-xl font-light text-white" %>
+  </div>
+</section>

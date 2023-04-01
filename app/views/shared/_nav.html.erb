@@ -1,0 +1,35 @@
+<header aria-label="Site Header" class="bg-[#3778c2]">
+  <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center md:gap-12">
+      <div onclick="location.href='/'" class="cursor-pointer bg-slate-100 rounded-lg m-1">
+        <img
+          alt="ProPay"
+          src="https://res.cloudinary.com/dyjiz4nff/image/upload/v1680124652/Deployed/Propay/yg7nmlvuiyaacyremugq.png"
+          class="h-16 w-auto"
+        />
+      </div>
+      <nav>
+        <ul class="flex items-center gap-6 text-sm justify-between">
+          <%= link_to group_index_path do %>
+          <li class="text-gray-50 transition text-lg font-medium hover:text-gray-500/75">Home</li>
+          <% end %> <%= link_to new_group_path do %>
+          <li class="text-gray-50 transition text-lg font-medium hover:text-gray-500/75">
+            New Category
+          </li>
+          <% end %>
+        </ul>
+      </nav>
+      <div>
+        <!-- log out -->
+        <form method="DELETE" action="/users/sign_out">
+          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+          <input
+            type="submit"
+            value="Sign out"
+            class="bg-[#32d4d6] p-1 rounded-lg m-1 text-gray-50 transition text-lg font-medium hover:text-[#32d4d6]/75 hover:bg-slate-50"
+          />
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
